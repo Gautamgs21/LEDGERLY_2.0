@@ -1,0 +1,135 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: var(--app-font);
+  --font-sans: var(--app-font);
+  --font-mono: var(--app-font);
+  --color-brand-purple: var(--color-primary);
+  --color-brand-dark-purple: var(--color-primary-hover);
+  --color-debt-red: #ea4335;
+  --color-credit-green: #0fa958;
+}
+
+:root {
+  --app-font: 'Open Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-sans: var(--app-font);
+  --font-serif: var(--app-font);
+  --font-mono: var(--app-font);
+  --color-primary: #4f46e5;
+  --color-primary-hover: #4338ca;
+  --color-primary-light: #eef2ff;
+  --color-primary-border: #c7d2fe;
+  --color-primary-text: #3730a3;
+  --color-primary-ring: #818cf8;
+  --color-primary-badge: #e0e7ff;
+  --color-brand-purple: #4f46e5;
+  --color-brand-dark-purple: #4338ca;
+}
+
+/* Universal typography: Every text element across every page inherits --app-font */
+*, *::before, *::after,
+html, body, #root,
+button, input, select, textarea, option, optgroup,
+h1, h2, h3, h4, h5, h6,
+p, span, div, a, label,
+table, thead, tbody, tfoot, tr, th, td,
+ul, ol, li {
+  font-family: var(--app-font) !important;
+}
+
+body {
+  font-family: var(--app-font) !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button, input, select, textarea {
+  font-family: var(--app-font) !important;
+}
+
+/* Ensure mono, headline, brand logo, and utility font classes strictly adopt the active font */
+.font-mono, [class*="font-mono"],
+.font-\[\'Cinzel\'\,serif\],
+.font-headline,
+.font-sans,
+.font-serif {
+  font-family: var(--app-font) !important;
+}
+
+/* Allow ONLY font selection preview rows in Settings to showcase their respective typography */
+.font-preview-specimen,
+[data-font-preview="true"] {
+  font-family: var(--preview-font) !important;
+}
+
+/* UPI Pay App buttons: GPay, PhonePe, Paytm, BHIM font color is always white */
+.pay-app-btn,
+.pay-app-btn span,
+button[id^="btn-pay-app-"],
+button[id^="btn-pay-app-"] span {
+  color: #ffffff !important;
+}
+
+/* Global button & accent theming: All primary action buttons & highlights reflect --color-primary */
+button.btn-primary-themed,
+button[class*="bg-[#5046e5]"],
+button[class*="bg-[#5c54db]"],
+button[class*="bg-indigo-600"],
+button#add-transactions-button,
+button#btn-pay-now-gautam,
+button#save-upi-btn,
+button#open-add-member-btn,
+button#btn-submit-add-member {
+  background-color: var(--color-primary) !important;
+  color: #ffffff !important;
+}
+
+button.btn-primary-themed:hover,
+button[class*="bg-[#5046e5]"]:hover,
+button[class*="bg-[#5c54db]"]:hover,
+button[class*="bg-indigo-600"]:hover,
+button[class*="hover:bg-[#4338ca]"]:hover,
+button[class*="hover:bg-indigo-700"]:hover,
+button#add-transactions-button:hover,
+button#btn-pay-now-gautam:hover,
+button#save-upi-btn:hover,
+button#open-add-member-btn:hover,
+button#btn-submit-add-member:hover {
+  background-color: var(--color-primary-hover) !important;
+}
+
+/* Primary text & icon classes */
+.text-\[\#5046e5\],
+.text-\[\#5c54db\],
+.text-indigo-600 {
+  color: var(--color-primary) !important;
+}
+
+/* Primary border classes */
+.border-\[\#5046e5\],
+.border-\[\#5c54db\],
+.border-indigo-500,
+.border-indigo-600 {
+  border-color: var(--color-primary) !important;
+}
+
+/* Light primary backgrounds & borders */
+.bg-\[\#5046e5\]\/10,
+.bg-\[\#eef0fc\],
+.bg-indigo-50 {
+  background-color: var(--color-primary-light) !important;
+}
+
+.border-indigo-100,
+.border-indigo-200 {
+  border-color: var(--color-primary-border) !important;
+}
+
+/* Custom scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+

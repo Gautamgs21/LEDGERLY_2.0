@@ -1,0 +1,6 @@
+{
+  "name": "Ledgerly - Expense Tracker",
+  "description": "Collaborative group expense tracker with member balances, UPI quick top-up, spending analytics, and transaction history.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
